@@ -11,7 +11,7 @@ https://github.com/temporalio/api/blob/master/temporal/api/enums/v1/event_type.p
 ### Why is it important?
 
 #### For wf exec
-"blue print" of your workflow execution
+"blueprint" of your workflow execution
 contains events "in order"
 each "wf exec update" can be composed of multiple events in history
 
@@ -35,22 +35,23 @@ client and worker commands to the server - https://github.com/temporalio/api/blo
     - testing - WorkflowReplayer
     - improve performance and architecture
 
-#### Where is it stored?
+### Where is it stored?
 temporal db
 visibility???
 
-#### How long is it available?
+### How long is it available?
 retention period
 ...archival???
 
-#### How to obtain it
+### How to obtain it
 tctl
 sdk apis
 web ui
 
-#### Limitations?
+### Limitations?
 
 50K/50MB
+https://docs.temporal.io/kb/temporal-platform-limits-sheet
 
 ## Chapter 2
 .... add here...
