@@ -1,2 +1,2 @@
-# temporal-understand-histories
-repo for understanding workflow event histories workshop
+# Temporal Understanding Workflow Histories Workshop
+
