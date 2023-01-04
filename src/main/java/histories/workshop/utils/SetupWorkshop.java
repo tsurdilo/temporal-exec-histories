@@ -1,6 +1,6 @@
 package histories.workshop.utils;
 
-import histories.workshop.chapter1.Chapter1Workflows;
+import histories.workshop.chapter2.Chapter2Workflows;
 import io.temporal.client.WorkflowClient;
 import io.temporal.client.WorkflowClientOptions;
 import io.temporal.serviceclient.WorkflowServiceStubs;
@@ -18,6 +18,6 @@ public class SetupWorkshop {
     }
 
     public static void main(String[] args) {
-        Chapter1Workflows.startChapter1(getClient("default", "chapter1"));
+        Chapter2Workflows.startChapter1(getClient("default", "chapter1"));
     }
 }

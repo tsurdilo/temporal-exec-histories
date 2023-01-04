@@ -1,4 +1,4 @@
-package histories.workshop.chapter1;
+package histories.workshop.chapter2;
 
 import io.temporal.client.WorkflowClient;
 import io.temporal.client.WorkflowOptions;
@@ -9,7 +9,7 @@ import java.time.Duration;
 import java.util.HashMap;
 import java.util.Map;
 
-public class Chapter1Workflows {
+public class Chapter2Workflows {
     public static void startChapter1(WorkflowClient client) {
         // 1. start wf (no worker)
         WorkflowStub wf = client.newUntypedWorkflowStub("Chapter1WF1",
