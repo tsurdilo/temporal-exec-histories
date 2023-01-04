@@ -50,8 +50,8 @@ web ui
 
 ### Limitations?
 
-50K/50MB
-https://docs.temporal.io/kb/temporal-platform-limits-sheet
+- 50K/50MB
+- https://docs.temporal.io/kb/temporal-platform-limits-sheet
 
 ## Chapter 2
 .... add here...
