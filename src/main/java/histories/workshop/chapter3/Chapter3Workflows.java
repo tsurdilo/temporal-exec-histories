@@ -1,15 +1,16 @@
-package histories.workshop.chapter2;
+package histories.workshop.chapter3;
 
+import com.google.common.collect.ImmutableMap;
 import io.temporal.client.WorkflowClient;
 import io.temporal.client.WorkflowOptions;
 import io.temporal.client.WorkflowStub;
 import io.temporal.common.RetryOptions;
 
 import java.time.Duration;
-import java.util.HashMap;
+import java.util.Collections;
 import java.util.Map;
 
-public class Chapter2Workflows {
+public class Chapter3Workflows {
     public static void startChapter1(WorkflowClient client) {
         // 1. start wf (no worker)
         WorkflowStub wf = client.newUntypedWorkflowStub("Chapter1WF1",
@@ -17,6 +18,7 @@ public class Chapter2Workflows {
                         .setWorkflowId("Chapter1 - WF1")
                         .setTaskQueue("c1f1tq")
                         .setSearchAttributes(getCustomSA("Chapter1 WF1"))
+                        .setMemo(Collections.singletonMap("MyMemo", "Chapter1WF1Memo"))
                         .build());
         wf.start("some input");
 
@@ -26,6 +28,7 @@ public class Chapter2Workflows {
                         .setWorkflowId("Chapter1 - WF2")
                         .setTaskQueue("c1f2tq")
                         .setSearchAttributes(getCustomSA("Chapter1 WF2"))
+                        .setMemo(Collections.singletonMap("MyMemo", "Chapter1WF2Memo"))
                         .build());
         wf2.start("some input2");
         for(int i=0;i<10;i++) {
@@ -41,6 +44,7 @@ public class Chapter2Workflows {
                         .setTaskQueue("c1f3tq")
                         .setWorkflowRunTimeout(Duration.ofSeconds(10))
                         .setSearchAttributes(getCustomSA("Chapter1 WF3"))
+                        .setMemo(Collections.singletonMap("MyMemo", "Chapter1WF3Memo"))
                         .build());
         wf3.start("some input3");
 
@@ -52,6 +56,7 @@ public class Chapter2Workflows {
                         .setWorkflowRunTimeout(Duration.ofSeconds(20))
                         .setWorkflowExecutionTimeout(Duration.ofSeconds(10))
                         .setSearchAttributes(getCustomSA("Chapter1 WF4"))
+                        .setMemo(Collections.singletonMap("MyMemo", "Chapter1WF4Memo"))
                         .build());
         wf4.start("some input4");
 
@@ -65,13 +70,12 @@ public class Chapter2Workflows {
                         .setRetryOptions(RetryOptions.newBuilder()
                                 .build())
                         .setSearchAttributes(getCustomSA("Chapter1 WF5"))
+                        .setMemo(Collections.singletonMap("MyMemo", "Chapter1WF5Memo"))
                         .build());
         wf5.start("some input5");
     }
 
     private static Map<String, Object> getCustomSA(String value) {
-        Map<String, Object> searchAttributes = new HashMap<>();
-        searchAttributes.put("CustomStringField", value);
-        return searchAttributes;
+        return ImmutableMap.of("CustomTextField", value);
     }
 }

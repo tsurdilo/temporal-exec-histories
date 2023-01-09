@@ -26,6 +26,7 @@
 		<version.jackson>2.13.1</version.jackson>
 		<version.micrometer-registry>1.8.5</version.micrometer-registry>
 		<java.module.name>${project.name}</java.module.name>
+		<version.gson>2.10</version.gson>
 	</properties>
 
 	<dependencies>
@@ -88,6 +89,12 @@
 			<groupId>io.micrometer</groupId>
 			<artifactId>micrometer-registry-prometheus</artifactId>
 			<version>${version.micrometer-registry}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.google.code.gson</groupId>
+			<artifactId>gson</artifactId>
+			<version>${version.gson}</version>
 		</dependency>
 
 

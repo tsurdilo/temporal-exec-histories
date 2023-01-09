@@ -34,10 +34,11 @@ client and worker commands to the server - https://github.com/temporalio/api/blo
     - debug / troubleshoot (which this workshop focuses on)
     - testing - WorkflowReplayer
     - improve performance and architecture
-
-### Where is it stored?
-temporal db
-visibility???
+  
+#### Where is it stored?
+- temporal db
+  - stored as proto 
+  - not stored in visibility
 
 ### How long is it available?
 retention period
