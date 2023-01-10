@@ -54,7 +54,7 @@ web ui
 - 50K/50MB
 - https://docs.temporal.io/kb/temporal-platform-limits-sheet
 
-## Chapter 2
+## Chapter 2. Workflows
 .... add here...
 
 ## Chapter 3 - Activities
